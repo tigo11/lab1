@@ -27,28 +27,47 @@
 ✅ 5. Ознакомиться со ссылками учебного материала и формализованными требованиями из основного описания
 
 ✅ 6. Сгенирировать **SSH** ключ и добавть его в список ключей для сервиса **GitHub**
-<img width="701" height="788" alt="Снимок экрана 2025-11-24 135323" src="https://gist.github.com/user-attachments/assets/00819e31-b02b-4917-ab42-13f2cf143065" />
-
-<img width="998" height="296" alt="Снимок экрана 2025-11-24 135642" src="https://gist.github.com/user-attachments/assets/e68ba210-f4b5-4a19-a9f5-d635e0af5a84" />
+<img width="701" height="788" alt="Снимок экрана 2025-11-24 135323" src="https://github.com/user-attachments/assets/59f39ea1-57a5-48c2-9345-bcbccce92c55" />
+<img width="998" height="296" alt="Снимок экрана 2025-11-24 135642" src="https://github.com/user-attachments/assets/0ff4c665-afaf-4bed-abad-aa0c54752952" />
 
 ✅ 7. Сгенерировать Personal Token с правами gist и сохранить его в файл
-<img width="1432" height="527" alt="Снимок экрана 2025-11-24 140521" src="https://gist.github.com/user-attachments/assets/2ba17979-887d-4bb5-b29b-4b8d527e197a" />
+<img width="1432" height="527" alt="Снимок экрана 2025-11-24 140521" src="https://github.com/user-attachments/assets/bf67e921-70a6-436c-a6d1-1a99603f6aed" />
 
-8. Сгенерировать GnuPG для подтверждения подписания коммитов и возможно использование Х.509 (включить в отчет описание, что такое smimesign)
+✅8. Сгенерировать GnuPG для подтверждения подписания коммитов и возможно использование Х.509 (включить в отчет описание, что такое smimesign)
 
 smimesign — инструмент для подписи Git-коммитов с помощью сертификатов X.509 / S/MIME, в отличие от GPG. Используется в корпоративных политиках. GitHub распознаёт такие подписи как Verified.
-<img width="764" height="714" alt="Снимок экрана 2025-11-24 140833" src="https://gist.github.com/user-attachments/assets/6cf21ef1-c86f-4d9e-8c68-2cc9de2cfcac" />
-<img width="980" height="421" alt="Снимок экрана 2025-11-24 141229" src="https://gist.github.com/user-attachments/assets/2c6ac0fc-79b4-42b4-a9f3-e9b9b8c6d29e" />
+<img width="980" height="421" alt="Снимок экрана 2025-11-24 141229" src="https://github.com/user-attachments/assets/dac31b4b-5ba7-41f3-9329-ecb73ec072dd" />
 
-9. Подготовить глобальные переменные окружения для GitHub
-<img width="775" height="296" alt="Снимок экрана 2025-11-24 141420" src="https://gist.github.com/user-attachments/assets/dcb3238e-94f1-4372-b11c-0ed8bae0114e" />
+✅9. Подготовить глобальные переменные окружения для GitHub
+``` bash
+┌──(tigo㉿tigo)-[~]
+└─$ git config --list
+user.name=tigo11
+user.email=tigrulia_442@mail.ru
+user.signingkey=E0C9B65FF7990225
+core.editor=nano
+core.autocrlf=input
+help.autocorrect=prompt
+credential.helper=cache
+commit.gpgsign=true
+```
 
-10. Ознакомиться с материалами gh сервиса и использовать их для авторизации, commit, pull request и тд.
-<img width="763" height="274" alt="Снимок экрана 2025-11-24 143112" src="https://gist.github.com/user-attachments/assets/7b64f971-b79d-4f2c-a6c1-400cd58e1595" />
+✅11. Ознакомиться с материалами gh сервиса и использовать их для авторизации, commit, pull request и тд.
+``` bash
+┌──(tigo㉿tigo)-[~]
+└─$ gh auth status
 
-11. Выполнить инструкцию учебного материала
-12. Оформить README.md по аналогии и использовать shield, etc.
-13. Составить gist отчет и отправить ссылку личным сообщением
+github.com
+  ✓ Logged in to github.com account tigo11 (keyring)
+  - Active account: true
+  - Git operations protocol: https
+  - Token: ghp_************************************
+  - Token scopes: 'admin:org', 'gist', 'repo', 'workflow'
+```
+
+12. Выполнить инструкцию учебного материала
+13. Оформить README.md по аналогии и использовать shield, etc.
+14. Составить gist отчет и отправить ссылку личным сообщением
 
 ***
 
@@ -56,6 +75,7 @@ smimesign — инструмент для подписи Git-коммитов с
 ``` bash
 mkdir risk_lab1
 cd risk_lab1
+
 git init
 ```
 Авторизуйтесь и используйте GitHub CLI для создания удаленного репозитория
